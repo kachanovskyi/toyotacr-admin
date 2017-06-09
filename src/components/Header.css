@@ -1,0 +1,27 @@
+nav > ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li {
+    padding: 16px 36px;
+    border: solid #605E5E;
+    border-width: 0 0 1px 0;
+    display: inline-block;
+}
+nav > ul > li.active {
+    border-width: 1px 1px 0 1px;
+}
+
+nav li > a {
+    text-decoration: none !important;
+    font: normal normal normal 25px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+    color: #605E5E;
+}
+
+nav > ul > li:first-child {
+    border-left-width: 0 !important;
+}
+nav > ul > li:last-child {
+    border-right-width: 0 !important;
+}

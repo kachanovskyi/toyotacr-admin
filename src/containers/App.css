@@ -1,0 +1,6 @@
+.App {
+    display: block;
+    float: left;
+    margin: 0 auto;
+    border: 3px dashed orangered;
+}
