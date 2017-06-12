@@ -14,3 +14,8 @@ body {
 .font_2 {
     font: normal normal normal 25px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
 }
+
+#root {
+    margin: auto;
+    float: left;
+}
