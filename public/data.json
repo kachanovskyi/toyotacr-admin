@@ -1,24 +1,47 @@
 {
   "isLogged": "false",
-  "todayStats": [
-    {
-      "users":"5",
-      "received":"6",
-      "sent":"7"
-    }
-  ],
-  "monthStats": [
-    {
-      "users":"5",
-      "received":"6",
-      "sent":"7"
-    }
-  ],
-  "allStats": [
-    {
-      "users":"5",
-      "received":"6",
-      "sent":"7"
-    }
-  ],
+  "statistics": {
+    "todayStats": [
+      {
+        "title": "Usuarios",
+        "amount": "1"
+      },
+      {
+        "title": "Mensajes Recibidos",
+        "amount": "2"
+      },
+      {
+        "title": "Mensajes Enviados",
+        "amount": "3"
+      }
+    ],
+    "monthStats": [
+      {
+        "title": "Usuarios",
+        "amount": "4"
+      },
+      {
+        "title": "Mensajes Recibidos",
+        "amount": "5"
+      },
+      {
+        "title": "Mensajes Enviados",
+        "amount": "6"
+      }
+    ],
+    "allStats": [
+      {
+        "title": "Usuarios",
+        "amount": "7"
+      },
+      {
+        "title": "Mensajes Recibidos",
+        "amount": "8"
+      },
+      {
+        "title": "Mensajes Enviados",
+        "amount": "9"
+      }
+    ]
+  }
 }

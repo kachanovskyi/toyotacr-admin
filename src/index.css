@@ -16,6 +16,5 @@ body {
 }
 
 #root {
-    margin: auto;
-    float: left;
+    width: 100%;
 }
