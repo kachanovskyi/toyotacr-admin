@@ -1,47 +1,4 @@
 {
-  "isLogged": "false",
-  "statistics": {
-    "todayStats": [
-      {
-        "title": "Usuarios",
-        "amount": "1"
-      },
-      {
-        "title": "Mensajes Recibidos",
-        "amount": "2"
-      },
-      {
-        "title": "Mensajes Enviados",
-        "amount": "3"
-      }
-    ],
-    "monthStats": [
-      {
-        "title": "Usuarios",
-        "amount": "4"
-      },
-      {
-        "title": "Mensajes Recibidos",
-        "amount": "5"
-      },
-      {
-        "title": "Mensajes Enviados",
-        "amount": "6"
-      }
-    ],
-    "allStats": [
-      {
-        "title": "Usuarios",
-        "amount": "7"
-      },
-      {
-        "title": "Mensajes Recibidos",
-        "amount": "8"
-      },
-      {
-        "title": "Mensajes Enviados",
-        "amount": "9"
-      }
-    ]
-  }
+  "isLogged": "true",
+  "username": "Some Name"
 }

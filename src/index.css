@@ -15,6 +15,25 @@ body {
     font: normal normal normal 25px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
 }
 
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.admin-btn {
+    background-color: rgba(255, 255, 255, 1);
+    border: solid rgba(65, 186, 174, 1) 1px;
+    transition: color 0.4s ease 0s;
+    color: #2B7C74;
+    display: inline-block;
+    text-decoration: none !important;
+    padding: 8px 24px;
+}
+.admin-btn:hover {
+    background-color: rgba(65, 186, 174, 1);
+    color: #ffffff;
+    cursor: pointer !important;
+}
+
 #root {
     width: 100%;
 }

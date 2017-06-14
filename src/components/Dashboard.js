@@ -12,13 +12,12 @@ class Dashboard extends Component {
         super();
         this.state = {
             titles: ["Estadísticas hoy", "Estadísticas Mes", "Total"],
-            stats: [],
-            elems: [0, 0, 0, 1, 1, 1, 2, 2, 2]
+            stats: []
         };
     };
 
     loadData() {
-        fetch('./data.json')
+        fetch('./dashboard.json')
             .then((response) => response.json())
             .then((responseJson) => {
 

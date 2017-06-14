@@ -12,7 +12,6 @@ const Header = (props) => {
         $('nav li').removeClass('active');
     };
 
-
     const addActive = ({target}) => {
 
         if ( $(target).parent().is('li') ) {
@@ -24,10 +23,13 @@ const Header = (props) => {
 
     };
 
+    const logOut = () => {
+        alert('log out clicked!');
+    };
+
     $(document).ready( function() {
 
         $('nav li > a').on('click', addActive);
-
         if (props.location.pathname !== "/") {
 
             removeActive();
@@ -39,12 +41,15 @@ const Header = (props) => {
 
     return (
         <header>
+            <div className="text-right">
+                <a className="admin-btn" onClick={logOut}>Salir</a>
+            </div>
+            <h1>Hola, {props.username}</h1>
             <nav>
                 <ul>
                     <li id="dashboard" className="active" onClick={addActive}><NavLink exact to='/'>Dashboard</NavLink></li>
                     <li id="usarious" onClick={addActive}><NavLink to='/usarious'>Usarious</NavLink></li>
                     <li id="conversaciones" onClick={addActive}><NavLink to='/conversaciones'>Conversaciones</NavLink></li>
-                    {/*<li><Link to='/conversations'>Conversaciones</Link></li>*/}
                 </ul>
             </nav>
         </header>

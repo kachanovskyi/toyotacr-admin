@@ -1,2 +1,2 @@
 # toyotacr-admin
-Chatbot widget front end for Toyota Costa Rica
+Chatbot admin panel front end for Toyota Costa Rica

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "user1",
+    "email": "email@user1.com",
+    "created": "11/11/2017",
+    "status": "active",
+    "bot": "active"
+  },
+  {
+    "name": "user2",
+    "email": "email@user2.com",
+    "created": "12/11/2017",
+    "status": "inactive",
+    "bot": "inactive"
+  },
+  {
+    "name": "user3",
+    "email": "email@user3.com",
+    "created": "13/11/2017",
+    "status": "active",
+    "bot": "active"
+  },
+  {
+    "name": "user4",
+    "email": "email@user4.com",
+    "created": "14/11/2017",
+    "status": "inactive",
+    "bot": "inactive"
+  },
+  {
+    "name": "user5",
+    "email": "email@user5.com",
+    "created": "15/11/2017",
+    "status": "active",
+    "bot": "active"
+  }
+]

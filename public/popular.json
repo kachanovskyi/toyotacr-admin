@@ -1,0 +1,34 @@
+{
+  "phrases": [
+    {
+      "type": "phrase",
+      "content": "some phrase"
+    },
+    {
+      "type": "phrase",
+      "content": "some second phrase"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "block",
+      "content": "some block"
+    },
+    {
+      "type": "block",
+      "content": "some second block"
+    }
+  ],
+
+  "buttons": [
+    {
+      "type": "button",
+      "content": "some button"
+    },
+    {
+      "type": "button",
+      "content": "some second button"
+    }
+  ]
+}
