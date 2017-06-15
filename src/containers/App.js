@@ -5,6 +5,7 @@ import {Col} from 'react-bootstrap';
 
 import Header from '../components/Header';
 import Main from '../components/Main';
+import Login from '../components/Login';
 
 import './App.css';
 
@@ -15,7 +16,19 @@ class App extends Component {
         super();
         this.state = {
             username: "",
+            isLogged: "false"
         };
+
+        this.logIn = this.logIn.bind(this);
+    };
+
+    logIn(username) {
+        console.log(`username: ${username}`);
+
+        this.setState({
+            username,
+            isLogged: "true"
+        })
     };
 
     loadData() {
@@ -24,7 +37,8 @@ class App extends Component {
             .then((responseJson) => {
 
                 this.setState({
-                    username: responseJson.username
+                    username: responseJson.username,
+                    isLogged: responseJson.isLogged
                 });
 
             })
@@ -38,6 +52,19 @@ class App extends Component {
     }
 
     render() {
+
+        if(this.state.isLogged === "false") {
+            return (
+                <div className="container-fluid">
+                    <div className="row">
+                        <Col xsOffset={1} xs={10} mdOffset={2} md={8} lg={6} lgOffset={3}>
+                            <Login logIn={this.logIn}/>
+                        </Col>
+                    </div>
+                </div>
+            )
+        }
+
         return (
             <div className="container-fluid">
                 <div className="row">
@@ -48,6 +75,7 @@ class App extends Component {
                 </div>
             </div>
         );
+
     }
 }
 

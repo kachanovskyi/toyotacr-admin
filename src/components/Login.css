@@ -1,0 +1,56 @@
+.Login {
+    height: 100vh;
+    display: table;
+    width: 100%;
+}
+
+.Login .login-form {
+    background-color: #ffffff;
+    padding: 12px 80px 80px;
+    text-align: center;
+    border: 1px solid rgba(204, 204, 204, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.login-form p {
+    font: normal normal normal 15px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+    color: #605E5E;
+    text-align: left;
+    margin: 0;
+}
+
+.login-form input {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid rgba(204, 204, 204, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    height: 42px;
+    padding: 0 12px;
+}
+
+.login-form .title {
+    margin-left: -50px;
+    margin-bottom: 50px;
+    font: normal normal normal 25px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+}
+
+.login-form .login-btn {
+    display: block;
+    margin: auto;
+    background-color: rgba(65, 186, 174, 1);
+    border: solid rgba(160, 160, 159, 1) 0;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    color: #ffffff;
+    transition: color 0.4s ease 0s;
+    height: 42px;
+    font-size: 16px;
+    padding-top: 11px;
+}
+.login-form .login-btn:hover {
+    background-color: #cccccc;
+}
