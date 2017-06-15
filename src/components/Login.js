@@ -33,6 +33,12 @@ const Login = ({logIn}) => {
         }
     };
 
+    $('#inputLogin, #inputPass').keypress(function(e){
+        if(e.which === 13){
+            login();
+        }
+    });
+
     return (
         <div className="Login">
             <div className="row table-cell">
