@@ -48,7 +48,7 @@ const Header = (props) => {
             <nav>
                 <ul>
                     <li id="dashboard" className="active" onClick={addActive}><NavLink exact to='/'>Dashboard</NavLink></li>
-                    <li id="usarious" onClick={addActive}><NavLink to='/usarious'>Usarious</NavLink></li>
+                    <li id="usuarious" onClick={addActive}><NavLink to='/usuarious'>Usuarios</NavLink></li>
                     <li id="conversaciones" onClick={addActive}><NavLink to='/conversaciones'>Conversaciones</NavLink></li>
                 </ul>
             </nav>
