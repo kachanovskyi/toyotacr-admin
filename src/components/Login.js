@@ -19,7 +19,6 @@ const Login = ({logIn}) => {
                 login,
                 pass
             };
-            console.log(data);
             fetch('./data.json', data)
                 .then((response) => response.json())
                 .then((responseJson) => {

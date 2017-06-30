@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './Users.css';
 
+import $ from 'jquery'
+
 class Users extends Component {
 
     constructor() {
@@ -9,6 +11,7 @@ class Users extends Component {
             users: []
         };
 
+        this.toggleBotActivation = this.toggleBotActivation.bind(this);
         this.toggleBotActivation = this.toggleBotActivation.bind(this);
     };
 
@@ -26,7 +29,43 @@ class Users extends Component {
     }
 
     toggleBotActivation({target}) {
-        console.log(target);
+
+        const parentBlock = $(target).parent().parent();
+        let botStatus = parentBlock.find('.bot-status')[0].innerHTML === "active" ? "inactive" : "active";
+
+        parentBlock.find('.bot-status').innerHTML = botStatus;
+        const index = parentBlock.data('key');
+
+        if(botStatus === "active") {
+            botStatus = "inactive";
+            parentBlock.find('.bot-status')[0].innerHTML = "active";
+            target.className="admin-btn active";
+            target.innerText = "Deactivate";
+        } else {
+            botStatus = "active";
+            parentBlock.find('.bot-status')[0].innerHTML = "inactive";
+            target.className="admin-btn inactive";
+            target.innerText = "Activate";
+        }
+
+        const data = {
+            name: parentBlock.find('.username')[0].innerHTML,
+            email: parentBlock.find('.user-email')[0].innerHTML,
+            status: parentBlock.find('.bot-status')[0].innerHTML
+        };
+
+        fetch('./data.json', data)
+            .then((response) => response.json())
+            .then((responseJson) => {
+
+                console.log(data);
+
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+        // console.log($(target).parent().parent().find('.user-email')[0].innerHTML);
     }
 
     componentDidMount() {
@@ -36,9 +75,6 @@ class Users extends Component {
     render() {
         return (
             <div className="Users">
-                <div className="text-right excel-btn-container">
-                    <a className="admin-btn">Exportar Excel</a>
-                </div>
                 <table>
                     <tbody>
                     <tr>
@@ -49,11 +85,11 @@ class Users extends Component {
                         <th>Bot activation</th>
                     </tr>
                     {this.state.users.map((user, index) => (
-                        <tr key={index}>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
+                        <tr key={index} data-key={index}>
+                            <td className="username">{user.name}</td>
+                            <td className="user-email">{user.email}</td>
                             <td>{user.created}</td>
-                            <td>{user.status}</td>
+                            <td className="bot-status">{user.status}</td>
                             <td>
 
                                 <a className={"admin-btn " + user.bot} onClick={this.toggleBotActivation}>
