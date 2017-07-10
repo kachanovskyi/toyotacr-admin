@@ -24,7 +24,7 @@ const Header = (props) => {
     };
 
     const logOut = () => {
-        alert('log out clicked!');
+        window.location.href = '/logout';
     };
 
     $(document).ready( function() {

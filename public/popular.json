@@ -2,11 +2,13 @@
   "phrases": [
     {
       "type": "phrase",
-      "content": "some phrase"
+      "content": "some phrase",
+      "counter": "2"
     },
     {
       "type": "phrase",
-      "content": "some second phrase"
+      "content": "some second phrase",
+      "counter": "3"
     }
   ],
 
@@ -24,11 +26,13 @@
   "buttons": [
     {
       "type": "button",
-      "content": "some button"
+      "content": "some button",
+      "counter": "5"
     },
     {
       "type": "button",
-      "content": "some second button"
+      "content": "some second button",
+      "counter": "4"
     }
   ]
 }

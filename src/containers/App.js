@@ -15,27 +15,30 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            username: "",
-            isLogged: ""
+            userId: sessionStorage.getItem("toyotaCRadminID"),
+            username: ""
         };
         this.logIn = this.logIn.bind(this);
     };
 
-    logIn(username) {
+    logIn(userId, username) {
+        sessionStorage.setItem("toyotaCRadminID", userId);
+
         this.setState({
-            username,
-            isLogged: "true"
+            userId,
+            username
         })
     };
 
     loadData() {
+        console.log('lerkmg;ergm');
         fetch('./data.json')
             .then((response) => response.json())
             .then((responseJson) => {
 
                 this.setState({
-                    username: responseJson.username,
-                    isLogged: responseJson.isLogged
+                    userId: responseJson.userId,
+                    username: responseJson.username
                 });
 
             })
@@ -50,7 +53,7 @@ class App extends Component {
 
     render() {
 
-        if(this.state.isLogged === "false") {
+        if(this.state.userId === null) {
             return (
                 <div className="container-fluid">
                     <div className="row">
@@ -61,7 +64,7 @@ class App extends Component {
                     </div>
                 </div>
             )
-        } else if(this.state.isLogged === "true") {
+        } else if(this.state.userId) {
             return (
                 <div className="container-fluid">
                     <div className="row">

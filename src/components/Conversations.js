@@ -45,13 +45,13 @@ class Conversations extends Component {
                     <Col xs={12} md={6} className="popular-block">
                         <h3 className="margin-bottom-10">Popular phrases</h3>
                         {this.state.phrases.map((phrase, index) => (
-                            <p key={index}>{phrase.content}</p>
+                            <p key={index}>{phrase.content} <span className="counter">{phrase.counter} times</span></p>
                         ))}
                     </Col>
                     <Col xs={12} md={6} className="popular-block">
                         <h3 className="margin-bottom-10">Popular buttons</h3>
                         {this.state.buttons.map((button, index) => (
-                            <p key={index}>{button.content}</p>
+                            <p key={index}>{button.content} <span className="counter">{button.counter} times</span></p>
                         ))}
                     </Col>
                 </div>

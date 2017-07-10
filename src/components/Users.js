@@ -75,6 +75,9 @@ class Users extends Component {
     render() {
         return (
             <div className="Users">
+                <div className="text-right excel-btn-container">
+                    <a className="admin-btn">Exportar Excel</a>
+                </div>
                 <table>
                     <tbody>
                     <tr>

@@ -15,3 +15,9 @@
 .Conversations .popular-block h3 {
     border-bottom: 1px solid #cccccc;
 }
+
+.Conversations .popular-block .counter {
+    padding: 6px;
+    background-color: #41baae;
+    border-radius: 5px;
+}

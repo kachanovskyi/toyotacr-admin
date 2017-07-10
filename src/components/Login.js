@@ -23,7 +23,7 @@ const Login = ({logIn}) => {
                 .then((response) => response.json())
                 .then((responseJson) => {
 
-                    logIn(responseJson.username);
+                    logIn(responseJson.userId, responseJson.username);
 
                 })
                 .catch((error) => {
